@@ -1,14 +1,19 @@
-﻿using MagicVilla_VillaAPI.Models;
+﻿
+using MagicVilla_VillaAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace MagicVilla_VillaAPI.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext(DbContextOptions options) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.UseSerialColumns();
+    }
+    
     public DbSet<Villa> Villas { get; set; }
 }
