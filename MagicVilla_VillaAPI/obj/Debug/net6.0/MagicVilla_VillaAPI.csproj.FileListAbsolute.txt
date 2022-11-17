@@ -147,3 +147,5 @@ C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\n
 C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net6.0\Npgsql.dll
 C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\MammadaliyevNN\RiderProjects\MagicVilla\MagicVilla_VillaAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -20,7 +20,7 @@ namespace MagicVillaVillaAPI.Migrations
                 .HasAnnotation("ProductVersion", "7.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            NpgsqlModelBuilderExtensions.UseSerialColumns(modelBuilder);
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("MagicVilla_VillaAPI.Models.Villa", b =>
                 {
@@ -28,7 +28,7 @@ namespace MagicVillaVillaAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Amenity")
                         .IsRequired()
@@ -64,6 +64,73 @@ namespace MagicVillaVillaAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Villas");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amenity = "",
+                            CreatedDate = new DateTime(2022, 11, 15, 0, 59, 13, 262, DateTimeKind.Local).AddTicks(1977),
+                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
+                            Name = "Royal Villa",
+                            Occupancy = 4,
+                            Rate = 200.0,
+                            Sqft = 550,
+                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Amenity = "",
+                            CreatedDate = new DateTime(2022, 11, 15, 0, 59, 13, 262, DateTimeKind.Local).AddTicks(1989),
+                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
+                            Name = "Premium Pool Villa",
+                            Occupancy = 4,
+                            Rate = 300.0,
+                            Sqft = 550,
+                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Amenity = "",
+                            CreatedDate = new DateTime(2022, 11, 15, 0, 59, 13, 262, DateTimeKind.Local).AddTicks(1990),
+                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
+                            Name = "Luxury Pool Villa",
+                            Occupancy = 4,
+                            Rate = 400.0,
+                            Sqft = 750,
+                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Amenity = "",
+                            CreatedDate = new DateTime(2022, 11, 15, 0, 59, 13, 262, DateTimeKind.Local).AddTicks(1990),
+                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
+                            Name = "Diamond Villa",
+                            Occupancy = 4,
+                            Rate = 550.0,
+                            Sqft = 900,
+                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Amenity = "",
+                            CreatedDate = new DateTime(2022, 11, 15, 0, 59, 13, 262, DateTimeKind.Local).AddTicks(1991),
+                            Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
+                            Name = "Diamond Pool Villa",
+                            Occupancy = 4,
+                            Rate = 600.0,
+                            Sqft = 1100,
+                            UpdateDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 #pragma warning restore 612, 618
         }
